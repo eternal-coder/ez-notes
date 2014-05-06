@@ -1,6 +1,6 @@
 <?php
 
-class user {
+class User {
     
    private $userId;
    private $db;
@@ -14,6 +14,6 @@ class user {
    }
    
    public function isLogged(){
-       
+       return !empty($this->userId);
    }
 }

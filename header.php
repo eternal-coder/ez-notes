@@ -1,7 +1,7 @@
 <?php
 require_once './config.php';
 require_once './medoo.min.php';
-
+require_once './user.php';
 session_start();
 
 $db = new medoo(array(
