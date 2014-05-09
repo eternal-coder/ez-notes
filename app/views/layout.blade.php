@@ -16,6 +16,7 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
+        {{ HTML::style('css/main.css'); }}
 
         <style>
             body {
@@ -32,7 +33,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        @include('menu')
+        @yield('menu')
 
         <div class="container main-container">
             @yield('content')
