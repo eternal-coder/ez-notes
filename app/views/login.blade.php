@@ -9,10 +9,11 @@
     <input type="checkbox" value="remember-me"> Remember me
 </label>
 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+<a onclick="showRegister()" class="link-register">Don't have an account?</a>
 {{ Form::close() }}
 <div class="register">
-    <a onclick="showRegister()">Register an account</a>
     {{ Form::open(array('url' => 'foo/bar', 'class'=> 'form-register', 'id' => 'register-form')) }}
+    <h2>Register</h2>
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
@@ -26,12 +27,19 @@
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    <a onclick="showLogin()" class="link-signin">Sign in with existing account</a>
     {{ Form::close() }}
 </div>
 
 <script>
     function showRegister(){
-        $('#register-form').show();
+        $('#register-form').slideDown();
+        $('#login-form').slideUp();
+    }
+    
+    function showLogin(){
+        $('#register-form').slideUp();
+        $('#login-form').slideDown();
     }
 </script>
 @stop

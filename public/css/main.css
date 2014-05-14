@@ -13,3 +13,15 @@
 .form-register{
     display: none;
 }
+
+.link-register{
+    margin-top: 40px;
+    display: block;
+    cursor: pointer;
+}
+
+.link-signin{
+    margin-top: 40px;
+    display: block;
+    cursor: pointer;
+}
