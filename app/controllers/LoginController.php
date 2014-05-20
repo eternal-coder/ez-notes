@@ -7,7 +7,13 @@ class LoginController extends BaseController{
     
     public function register() {
         $input = Input::all();
-        return "";
+        if($input['password'] === $input['passwordRepeat']){
+            $user = new User();
+            $user->email = $input['email'];
+            $user->password = Hash::make($input['password']);
+            $user->save();
+        }
+        return "User created";
     }
     
     public function login(){
